@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			border: 0px;
+			margin: 0px;
+		}
+		input{
+			display: none;
+		}
+		label{
+			display: inline-block;
+			width: 60px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+		}
+		.contents{
+			box-sizing: border-box;
+			width: 600px;
+			height: 480px;
+			border: 1px solid #000;
+			overflow: hidden;
+			position: relative;
+		}
+		.contents *{
+			width: 600px;
+			height: 480px;
+		}
+		#con1{
+			background-color: #ffdddd;
+		}
+		#con2{
+			background-color: #ddffdd;
+		}
+		#con3{
+			background-color: #ddddff;
+		}
+		#tab1:checked~#label1{
+			background-color: #000000;
+			color: white;
+		}
+		#tab2:checked~#label2{
+			background-color: #000000;
+			color: white;
+		}
+		#tab3:checked~#label3{
+			background-color: #000000;
+			color: white;
+		}
+		#tab1:checked~.contents #con1{
+			position: relative;
+			top: 0px;
+		}
+		#tab2:checked~.contents #con2{
+			position: relative;
+			top: -480px;
+		}
+		#tab3:checked~.contents #con3{
+			position: relative;
+			top: -960px;
+		}
+	</style>
+	<body>
+		<div class="tabs">
+			<input type="radio" checked="checked" name="tab" id="tab1"/>
+			<input type="radio" name="tab" id="tab2"/>
+			<input type="radio" name="tab" id="tab3"/>
+			<label for="tab1" id="label1">新闻</label>
+			<label for="tab2" id="label2">通知</label>
+			<label for="tab3" id="label3">公告</label>
+			<div class="contents">			
+				<div id="con1">
+					新闻内容
+				</div>
+				<div id="con2">
+					通知内容
+				</div>
+				<div id="con3">
+					公告内容
+				</div>	
+			</div>
+		</div>
+	</body>
+</html>
